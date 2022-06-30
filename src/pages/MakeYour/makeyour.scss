@@ -1,0 +1,31 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.makeyour {
+    position: relative;
+    height: 540px;
+    width: 100%;
+    margin-bottom: 96px;
+    @include centralize($justify: flex-end);
+    &_image {
+        left: 0;
+        width: 600px;
+        position: absolute;
+    }
+    &_content {
+        @include centralize($direction: column, $align: flex-start);
+        gap: 32px;
+        z-index: 2;
+    }
+    .title-page {
+        @include title_text-page(
+            $weight: 900,
+            $size: 5.8rem,
+            $line-height: 5.6rem
+        );
+    }
+    .button{
+        background-color: $purple-color;
+        text-align: center;
+    }
+}

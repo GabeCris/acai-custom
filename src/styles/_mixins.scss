@@ -1,0 +1,27 @@
+@import './variables';
+
+@mixin centralize($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin title_text-page($weight: 900, $size: 8rem, $width: 57rem, $line-height: 8rem) {
+    font-weight: $weight;
+    font-size: $size;
+    width: $width;
+    text-align: left;
+    line-height: $line-height;
+    &::selection{
+        background-color: $purple-color;
+        color: $gray-color;
+    }
+}
+
+@mixin button($p_height: 12px, $p_width: 32px, $color: $yellow-color, $font: 2.4rem){
+    padding: $p_height $p_width;
+    background-color: $color;
+    font-size: $font;
+    color: $gray-color;
+}

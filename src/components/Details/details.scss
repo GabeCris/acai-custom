@@ -1,0 +1,29 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.details-container {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    @include centralize();
+    z-index: 30;
+    .details-box{
+            padding: 0 32px;
+            background-color: $gray-color;
+            width: 340px;
+            height: 230px;
+            border-radius: 20px;
+            @include centralize($direction: column, $align: center);
+            gap: 32px;
+            z-index: 2;
+        
+    }
+    .bg-details {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+    }
+}
