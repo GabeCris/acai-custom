@@ -8,26 +8,24 @@ import Data from "../../data/DataStep4.js";
 import { motion } from "framer-motion";
 
 const StepAditional1_3 = () => {
-    const { acai, setAcai, setRender, setPosition, position, setPrice, price } =
+    const { acai, setAcai, setRender, setPosition, position, setPrice, price, flag, setFlag } =
         useContext(Context);
 
     useEffect(() => {
         setPosition(4);
     });
 
-    const [flag, setFlag] = useState(true);
-
     const handleClick = (e) => {
         const clicked = e.target.value;
 
         if (clicked != " ") {
-            if (flag) {
-                setFlag(false);
+            if (flag.aditional1) {
+                setFlag({...flag, aditional1: false})
                 setPrice(price + 2);
             }
         } else {
-            if (!flag) {
-                setFlag(true);
+            if (!flag.aditional1) {
+                setFlag({...flag, aditional1: true})
                 setPrice(price - 2);
             }
         }

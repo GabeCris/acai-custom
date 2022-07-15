@@ -15,6 +15,7 @@
     &_row{
         width: 100%;
         @include centralize($justify: space-between);
+        flex-wrap: wrap;
     }
     &_card{
         width: 50px;

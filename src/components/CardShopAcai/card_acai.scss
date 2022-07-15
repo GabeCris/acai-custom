@@ -4,7 +4,7 @@
 .card-shop {
     position: relative;
     width: 230px;
-    height: 340px;
+    height: 320px;
     padding-bottom: 32px;
     @include centralize($direction: column);
     input {
@@ -44,7 +44,7 @@
     &_image {
         transition: $transition;
         z-index: 2;
-        height: 238px;
+        height: 240px;
     }
     .text {
         width: 100%;

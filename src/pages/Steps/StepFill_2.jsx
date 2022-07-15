@@ -8,7 +8,7 @@ import Data from "../../data/DataStep2.js";
 import { motion } from "framer-motion";
 
 const StepFill_2 = () => {
-    const { acai, setAcai, setRender, setPosition, position } =
+    const { acai, setAcai, setRender, setPosition, position, setFlag, flag, price, setPrice } =
         useContext(Context);
 
     useEffect(() => {
@@ -18,6 +18,18 @@ const StepFill_2 = () => {
 
     const handleClick = (e) => {
         const clicked = e.target.value;
+
+        if (clicked == 1 || clicked == 2) {
+            if (flag.fill) {
+                setFlag({...flag, fill: false})
+                setPrice(price + 1);
+            }
+        } else {
+            if (!flag.fill) {
+                setFlag({...flag, fill: true})
+                setPrice(price - 1);
+            }
+        }
         setRender(true);
         setTimeout(() => setRender(false), 200);
         setAcai({

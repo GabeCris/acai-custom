@@ -8,34 +8,39 @@ import Data from "../../data/DataStep5.js";
 import { motion } from "framer-motion";
 
 const StepFruit_3 = () => {
-    const { acai, setAcai, setRender, setPosition, position , setPrice, price} =
-        useContext(Context);
+    const {
+        acai,
+        setAcai,
+        setRender,
+        setPosition,
+        position,
+        setPrice,
+        price,
+        flag,
+        setFlag,
+    } = useContext(Context);
 
     useEffect(() => {
         setPosition(5);
         console.log("PAGE 2 MEU POSITION É " + position);
-        console.log("CONTEUDO: "+acai.fruit)
+        console.log("CONTEUDO: " + acai.fruit);
     });
-
-    const [flag, setFlag] = useState(true);
 
     const handleClick = (e) => {
         const clicked = e.target.value;
-        
-        if(clicked != ' '){
-            if(flag){
-                setFlag(false);
-                setPrice(price+2);
-            }
-        }
-        else{
-            if(!flag){
-                setFlag(true);
-                setPrice(price-2);
-            }
 
+        if (clicked != " ") {
+            if (flag.fruit) {
+                setFlag({ ...flag, fruit: false });
+                setPrice(price + 2);
+            }
+        } else {
+            if (!flag.fruit) {
+                setFlag({ ...flag, fruit: true });
+                setPrice(price - 2);
+            }
         }
-        
+
         setRender(true);
         setTimeout(() => setRender(false), 200);
         setAcai({
@@ -58,12 +63,10 @@ const StepFruit_3 = () => {
                 exit={{ translateX: -window.innerWidth * 2 }}
             >
                 <h1 className="title-step">Vamos agora para as frutas!</h1>
-                <div className="text">Qual fruta mais gosta?
-            </div>
+                <div className="text">Qual fruta mais gosta?</div>
 
                 <div className="options">
-                    {Data.map((option, index) => 
-                        (
+                    {Data.map((option, index) => (
                         <OptionStep
                             content={option.content}
                             icon={option.icon}

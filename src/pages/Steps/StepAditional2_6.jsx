@@ -8,7 +8,7 @@ import Data from "../../data/DataStep6.js";
 import { motion } from "framer-motion";
 
 const StepAditional2_6 = () => {
-    const { acai, setAcai, setRender, setPosition, position, setPrice, price } =
+    const { acai, setAcai, setRender, setPosition, position, setPrice, price, setFlag, flag } =
         useContext(Context);
 
     useEffect(() => {
@@ -17,19 +17,18 @@ const StepAditional2_6 = () => {
         console.log("CONTEUDO: " + acai.fruit);
     });
 
-    const [flag, setFlag] = useState(true);
 
     const handleClick = (e) => {
         const clicked = e.target.value;
 
         if (clicked != " ") {
-            if (flag) {
-                setFlag(false);
+            if (flag.aditional2) {
+                setFlag({...flag, aditional2: false})
                 setPrice(price + 2);
             }
         } else {
-            if (!flag) {
-                setFlag(true);
+            if (!flag.aditional2) {
+                setFlag({...flag, aditional2: true})
                 setPrice(price - 2);
             }
         }

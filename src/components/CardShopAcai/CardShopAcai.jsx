@@ -3,9 +3,18 @@ import "./card_acai.scss";
 import Button from "../Button/Button";
 import { Context } from "../../contexts/Context";
 import { useState, useContext } from "react";
+import DataGourmet from "../../data/DataMenuGourmet";
+import DataTraditional from "../../data/DataMenuTraditional";
 
-const CardShopAcai = ({ title, size, price }) => {
-    const { detailsModal, setDetailsModal } = useContext(Context);
+const CardShopAcai = ({ title, size, price, url, id, handleClick }) => {
+    const {
+        detailsModal,
+        setDetailsModal,
+        handleAddItemCart,
+        idDetails,
+        handleSize,
+    } = useContext(Context);
+    // console.log("MEU ID É "+id)
 
     const sizes = [
         {
@@ -29,9 +38,15 @@ const CardShopAcai = ({ title, size, price }) => {
         <div className="card-shop">
             <p className="price">${price}</p>
 
-            <img className="card-shop_image" src="./assets/acai/1.svg" />
-            <Button text="Adicionar" secondary={true} />
-            <img className="card-shop_icon-detail" src="./assets/page/icon-detail.svg" alt="" onClick={()=> setDetailsModal(!detailsModal)}/>
+            <img className="card-shop_image" src={url} />
+            <Button text="Adicionar" secondary={true} handle={true} id={id} size={sizeChanged}/>
+            <img
+                className="card-shop_icon-detail"
+                src="./assets/page/icon-detail.svg"
+                alt=""
+                id={id}
+                onClick={handleClick}
+            />
             <p className="text">{title}</p>
             <div className="card-shop_label-container">
                 {sizes.map((sizeArray) => (

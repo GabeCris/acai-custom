@@ -15,11 +15,13 @@ import Details from "../components/Details/Details";
 
 const Fullpage = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const { setModal, detailsModal} = useContext(Context);
+    const { setModal, detailsModal, resetAcai, sumAmountView, renderCart } =
+        useContext(Context);
 
     useEffect(() => {
         setModal(false);
         window.addEventListener("scroll", listenToScroll);
+        resetAcai();
         return () => window.removeEventListener("scroll", listenToScroll);
     }, []);
 
@@ -37,19 +39,20 @@ const Fullpage = () => {
 
     return (
         <div className="page">
-            {detailsModal && (
-                <Details/>
-            )}
+            {detailsModal && <Details />}
+        
             <Link to="/page/cart">
                 <div
                     className={`open_cart ${
                         isVisible == true ? "open_cart-show" : ""
-                    }`}
+                    }   
+                    `}
                 >
+                    <p className="amount_cart">{sumAmountView}</p>
                     <img
                         src="./assets/page/cart.svg"
                         alt=""
-                        className="open_cart-icon"
+                        className={`open_cart-icon ${renderCart == true ? 'open_cart-icon-shake' : ""}`}
                     />
                 </div>
             </Link>
@@ -75,8 +78,9 @@ const Fullpage = () => {
                     className="acai-model"
                 />
             </div>
-            <Products title="Gourmet"></Products>
-            <Products title="Tradicional"></Products>
+            <Products title="Gourmet" type="gourmet"></Products>
+            <Products title="Tradicional" type="traditional"></Products>
+            {/* <Products title="Tradicional"></Products> */}
             <MakeYour></MakeYour>
             <footer className="footer">
                 <img src="./assets/page/footer.svg" alt="" />

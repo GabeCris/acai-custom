@@ -1,0 +1,100 @@
+const url = "./assets/acai/";
+
+const data = [
+    {
+        acai: {
+            amount: 1,
+            id: 1,
+            title: "Morango & Nutella",
+            size: "p",
+            fill: 0,
+            fruit: "strawberry",
+            aditional1: "granulated",
+            roof: "nutella",
+            aditional2: "kitkat",
+            price: 16,
+            url: `${url}/acai_gourmet-1.svg`,
+            priceAmount : 0,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Morango",
+                aditional1: "Granulado",
+                roof: "Nutella",
+                aditional2: "Kit Kat",
+            },
+        },
+    },
+    {
+        acai: {
+            amount: 1,
+            id: 2,
+            title: "Banana & Leite Cond",
+            size: "p",
+            fill: 2,
+            fruit: "banana",
+            aditional1: "chocoball",
+            roof: "milk",
+            aditional2: "any",
+            price: 14,
+            url: `${url}/acai_gourmet-2.svg`,
+            
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Banana",
+                aditional1: "Chocobol",
+                roof: "Leite Cond",
+                aditional2: "Nenhum",
+            },
+        },
+    },
+    {
+        acai: {
+            amount: 1,
+            id: 3,
+            title: "Kiwi & Nutella",
+            size: "p",
+            fill: 1,
+            fruit: "kiwi",
+            aditional1: "any",
+            roof: "nutella",
+            aditional2: "two-tube",
+            price: 12,
+            url: `${url}/acai_gourmet-3.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Kiwi",
+                aditional1: "Nenhum",
+                roof: "Nutella",
+                aditional2: "2 tubetes",
+            },
+        },
+    },
+    {
+        acai: {
+            amount: 1,
+            id: 4,
+            title: "Banana & Doce Leite",
+            size: "p",
+            fill: 2,
+            fruit: "banana",
+            aditional1: "granulated",
+            roof: "caramel",
+            aditional2: "kitkat",
+            price: 12,
+            url: `${url}/acai_gourmet-4.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Banana",
+                aditional1: "Granulado",
+                roof: "Doce Leite",
+                aditional2: "Kit Kat",
+            },
+        },
+    },
+];
+
+export default data;

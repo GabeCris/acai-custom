@@ -1,0 +1,98 @@
+const url = "./assets/acai/";
+
+const data = [
+    {
+        acai: {
+            id: 5,
+            amount: 1,
+            title: "Morango & Framboesa",
+            size: "p",
+            fill: 2,
+            fruit: "strawberry",
+            aditional1: "confetti",
+            roof: "raspberry",
+            aditional2: "one-tube",
+            price: 10,
+            url: `${url}/acai_traditional-1.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Morango",
+                aditional1: "Confete",
+                roof: "Framboesa",
+                aditional2: "1 tubete",
+            },
+        },
+    },
+    {
+        acai: {
+            id: 6,
+            amount: 1,
+            title: "Kiwi & Doce Leite",
+            size: "p",
+            fill: 1,
+            fruit: "kiwi",
+            aditional1: "any",
+            roof: "caramel",
+            aditional2: "any",
+            price: 8,
+            url: `${url}/acai_traditional-2.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Kiwi",
+                aditional1: "Nenhum",
+                roof: "Doce Leite",
+                aditional2: "Nenhum",
+            },
+        },
+    },
+    {
+        acai: {
+            id: 7,
+            amount: 1,
+            title: "Uva & Leite Cond",
+            size: "p",
+            fill: 2,
+            fruit: "graper",
+            aditional1: "granulated",
+            roof: "milk",
+            aditional2: "two-tube",
+            price: 10,
+            url: `${url}/acai_traditional-3.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Uva",
+                aditional1: "Granulado",
+                roof: "Leite Cond",
+                aditional2: "2 tubetes",
+            },
+        },
+    },
+    {
+        acai: {
+            id: 8,
+            amount: 1,
+            title: "Framboesa",
+            size: "p",
+            fill: 0,
+            fruit: "any",
+            aditional1: "peanut",
+            roof: "raspberry",
+            aditional2: "cherry",
+            price: 10,
+            url: `${url}/acai_traditional-4.svg`,
+            details: {
+                size: "Pequeno",
+                fill: "Camadas",
+                fruit: "Nenhum",
+                aditional1: "Amendoim",
+                roof: "Framboesa",
+                aditional2: "Cereja",
+            },
+        },
+    },
+];
+
+export default data;

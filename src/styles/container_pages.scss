@@ -42,7 +42,13 @@
     .page-container {
         @include centralize($direction: column, $align: flex-start);
         .title {
+            line-height: 36px;
+            @include centralize();
             font-size: 36px;
+            span{
+                margin-left: 6px;
+                font-size: 12px;
+            }
         }
         .cards-container {
             overflow-y: auto;
@@ -72,7 +78,9 @@
                     }
                 }
                 &_content {
+                    line-height: 20px;
                     height: 100%;
+                    width: 200px;
                     @include centralize(
                         $direction: column,
                         $justify: space-between,

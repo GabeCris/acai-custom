@@ -1,31 +1,30 @@
-@import './mixins';
-@import './variables';
+@import "./mixins";
+@import "./variables";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: $purple-color;
     user-select: none;
 }
 
-html{
+html {
     font-size: 10px;
     overflow-x: hidden;
-    
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.title, .text{
-
+.title,
+.text {
     color: $purple-color;
 }
 
-.page{
+.page {
     position: relative;
     @include centralize($direction: column);
     width: 100%;
@@ -34,27 +33,26 @@ a{
     background-color: $gray-color;
 }
 
-.home{
+.home {
     @include centralize($justify: space-between);
     width: 100%;
     height: 100vh;
 }
 
-
-.title-page{
+.title-page {
     @include title_text-page($width: 50rem);
 }
 
-.text{
+.text {
     @include title_text-page(500, 2.4rem, 53rem, 30px);
 }
 
-.content{
+.content {
     @include centralize(center, flex-start, column);
     gap: 32px;
 }
 
-.button{
+.button {
     position: relative;
     font-size: 2.4rem;
     background-color: $yellow-color;
@@ -63,37 +61,37 @@ a{
     color: $gray-color;
     border-radius: 50px;
     z-index: 5;
-    img{
+    img {
         position: absolute;
         width: 40%;
         bottom: 0;
         right: 0;
         transform: translateY(95%) translateX(-40%);
     }
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
-    &:active{
+    &:active {
         cursor: grabbing;
     }
-    &-clicked{
-        animation: button .2s ease-in-out;
+    &-clicked {
+        animation: button 0.2s ease-in-out;
     }
 }
 
-.background{
+.background {
     position: absolute;
     // height: 100%;
     right: 0;
     z-index: 0;
 }
 
-.acai-model{
+.acai-model {
     z-index: 2;
     width: 32rem;
 }
 
-.open_cart{
+.open_cart {
     transition: $transition;
     transform: translateX(150px);
     @include centralize();
@@ -107,54 +105,96 @@ a{
     width: 64px;
     height: 64px;
     margin: 16px 32px;
-    &-icon{
+    &-icon {
         transition: $transition;
     }
-    &:hover{
-        .open_cart-icon{
+    &:hover {
+        .open_cart-icon {
             transition: $transition;
-            animation: cart .2s ease-in-out;
+            animation: cart 0.2s ease-in-out;
         }
     }
-    &-show{
+    &-icon-shake {
+        transition: $transition;
+        animation: cart 0.2s ease-in-out;
+    }
+    &-show {
         transition: $transition;
         transform: translateX(0);
     }
+    .amount_cart {
+        top: 0;
+        right: 0;
+        position: absolute;
+        @include centralize;
+        font-weight: bold;
+        font-size: 12px;
+        background-color: $yellow-color;
+        color: $purple-color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
 }
 
-.footer{
-    img{
+.footer {
+    img {
         width: 100vw;
+        height: 100%;
     }
 }
 
 @keyframes button {
-    0%{
-    letter-spacing: 0px;
+    0% {
+        letter-spacing: 0px;
     }
-    50%{
+    50% {
         letter-spacing: 2px;
-        
     }
-    100%{
+    100% {
         letter-spacing: 0px;
     }
 }
 
 @keyframes cart {
-    0%{
+    0% {
         transform: rotate(0px);
     }
-    25%{
+    25% {
         transform: rotate(45deg);
     }
-    50%{
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+    75% {
         transform: rotate(-45deg);
     }
-    100%{
+    100% {
         transform: rotate(0deg);
+    }
+}
+
+.Toastify {
+    &__toast-container {
+        width: 150px;
+        @include centralize($direction: column);
+        gap: 10px;
+        &--top-right {
+            position: fixed;
+            margin: 10px;
+            z-index: 50;
+            right: 0;
+        }
+    }
+    &__close-button {
+        display: none;
+    }
+    &__toast-body {
+        border-radius: 10px;
+        color: $gray-color;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px;
+        background-color: $purple-color;
     }
 }

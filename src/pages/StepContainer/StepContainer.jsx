@@ -20,7 +20,7 @@ const StepContainer = () => {
         setModal,
     } = useContext(Context);
 
-    console.log("O PRICE DO ACAI É " + acai.price);
+    // console.log("O PRICE DO ACAI É " + acai.price);
     return (
         <div className="step-container">
             {modal && (
@@ -146,7 +146,6 @@ const StepContainer = () => {
                         alt=""
                     />
                 )}
-                {console.log("POSITION DA BAR " + position)}
                 {ProgressData.map((pos, index) => (
                     <div
                         className={`progress ${

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "logopage.scss"
+    ],
+    "names": [],
+    "file": "logopage.css"
+}

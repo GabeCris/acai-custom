@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title, .text {
+  color: #642B48;
+}
+
+.page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 19.6rem;
+  background-color: #DDDDDD;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.title-page {
+  font-weight: 900;
+  font-size: 8rem;
+  width: 50rem;
+  text-align: left;
+  line-height: 8rem;
+}
+
+.title-page::-moz-selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.title-page::selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 2.4rem;
+  width: 53rem;
+  text-align: left;
+  line-height: 30px;
+}
+
+.text::-moz-selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.text::selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+
+.button {
+  position: relative;
+  font-size: 2.4rem;
+  background-color: #F7B90A;
+  font-weight: bold;
+  padding: 16px 90px;
+  color: #DDDDDD;
+  border-radius: 50px;
+  z-index: 5;
+}
+
+.button img {
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(95%) translateX(-40%);
+          transform: translateY(95%) translateX(-40%);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.button-clicked {
+  -webkit-animation: button .2s ease-in-out;
+          animation: button .2s ease-in-out;
+}
+
+.background {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+.acai-model {
+  z-index: 2;
+  width: 32rem;
+}
+
+.open_cart {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 5;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: #642B48;
+  width: 64px;
+  height: 64px;
+  margin: 16px 32px;
+}
+
+.open_cart-icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.open_cart:hover .open_cart-icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: cart .2s ease-in-out;
+          animation: cart .2s ease-in-out;
+}
+
+.open_cart-show {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.open_cart .amount_cart {
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #F7B90A;
+  color: #642B48;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.footer img {
+  width: 100vw;
+  height: 100%;
+}
+
+@-webkit-keyframes button {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes button {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@-webkit-keyframes cart {
+  0% {
+    -webkit-transform: rotate(0px);
+            transform: rotate(0px);
+  }
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes cart {
+  0% {
+    -webkit-transform: rotate(0px);
+            transform: rotate(0px);
+  }
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.Toastify__toast-container {
+  width: 150px;
+}
+
+.Toastify__close-button {
+  display: none;
+}
+/*# sourceMappingURL=global.css.map */

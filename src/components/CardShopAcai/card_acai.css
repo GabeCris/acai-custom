@@ -1,0 +1,176 @@
+.card-shop {
+  position: relative;
+  width: 230px;
+  height: 320px;
+  padding-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-shop input {
+  display: none;
+}
+
+.card-shop .price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 800;
+  font-size: 3.2rem;
+  width: 100%;
+  text-align: left;
+  line-height: 32px;
+}
+
+.card-shop .price::-moz-selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.card-shop .price::selection {
+  background-color: #642B48;
+  color: #DDDDDD;
+}
+
+.card-shop .button {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  padding: 12px 32px;
+  background-color: #642B48;
+  font-size: 2.4rem;
+  color: #DDDDDD;
+}
+
+.card-shop::after {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  content: "";
+  background-color: #F7B90A;
+  width: 100%;
+  border-radius: 20px;
+  height: 138px;
+  bottom: 0;
+}
+
+.card-shop_icon-detail {
+  z-index: 2;
+  position: absolute;
+  left: 15px;
+  bottom: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.card-shop_image {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 2;
+  height: 240px;
+}
+
+.card-shop .text {
+  width: 100%;
+  z-index: 3;
+  font-size: 1.8rem;
+  margin-top: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+}
+
+.card-shop:hover {
+  cursor: pointer;
+}
+
+.card-shop:hover .card-shop_image {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 200px;
+}
+
+.card-shop:hover::after {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 158px;
+}
+
+.card-shop:hover .card-shop_label-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card-shop:hover .card-shop_icon-detail {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+  bottom: 125px;
+}
+
+.card-shop_label-container {
+  margin: 16px 0px 0px 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+}
+
+.card-shop_label-container .label-size {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 6px 8px;
+  color: #F7B90A;
+  background-color: #DDDDDD;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.card-shop_label-container .label-size:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.card-shop_label-container .label-checked {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #642B48;
+}
+/*# sourceMappingURL=card_acai.css.map */

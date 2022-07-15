@@ -8,34 +8,27 @@ import Data from "../../data/DataStep3.js";
 import { motion } from "framer-motion";
 
 const StepRoof_3 = () => {
-    const { acai, setAcai, setRender, setPosition, position , setPrice, price} =
-        useContext(Context);
-
+    const { acai, setAcai, setRender, setPosition, position, setPrice, price, flag, setFlag } =
+    useContext(Context);
+    
     useEffect(() => {
         setPosition(3);
-        console.log("PAGE 2 MEU POSITION É " + position);
-        console.log("CONTEUDO: "+acai.fruit)
     });
-
-    const [flag, setFlag] = useState(true);
 
     const handleClick = (e) => {
         const clicked = e.target.value;
-        
-        if(clicked != ' '){
-            if(flag){
-                setFlag(false);
-                setPrice(price+2);
+        if (clicked != " ") {
+            if (flag.roof) {
+                setFlag({...flag, roof: false})
+                setPrice(price + 2);
+            }
+        } else {
+            if (!flag.roof) {
+                setFlag({...flag, roof: true})
+                setPrice(price - 2);
             }
         }
-        else{
-            if(!flag){
-                setFlag(true);
-                setPrice(price-2);
-            }
 
-        }
-        
         setRender(true);
         setTimeout(() => setRender(false), 200);
         setAcai({
@@ -58,12 +51,10 @@ const StepRoof_3 = () => {
                 exit={{ translateX: -window.innerWidth * 2 }}
             >
                 <h1 className="title-step">E de uma coberturinha?</h1>
-                <div className="text">Escolha o sabor da cobertura: 
-            </div>
+                <div className="text">Escolha o sabor da cobertura:</div>
 
                 <div className="options">
-                    {Data.map((option, index) => 
-                        (
+                    {Data.map((option, index) => (
                         <OptionStep
                             content={option.content}
                             icon={option.icon}

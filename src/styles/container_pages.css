@@ -1,0 +1,291 @@
+.container-pages {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  padding: 0 19.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #DDDDDD;
+}
+
+.container-pages > a {
+  margin: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container-pages > a .close-icon {
+  cursor: pointer;
+  z-index: 2;
+  width: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 48px;
+  background-color: #642B48;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container-pages > a .close-icon:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container-pages > a .close-icon a {
+  line-height: 0;
+}
+
+.container-pages .step-bg {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+}
+
+.container-pages .page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-pages .page-container .title {
+  line-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 36px;
+}
+
+.container-pages .page-container .title span {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.container-pages .page-container .cards-container {
+  overflow-y: auto;
+  height: 316px;
+  border-radius: 10px;
+  width: 530px;
+  margin: 16px 0 32px 0;
+}
+
+.container-pages .page-container .cards-container .card {
+  width: 475px;
+  background-color: #642B48;
+  border-radius: 10px;
+  height: 150px;
+  padding: 18px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container-pages .page-container .cards-container .card:last-child {
+  margin-bottom: 0px;
+}
+
+.container-pages .page-container .cards-container .card_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 5px;
+  height: 100%;
+  width: 90px;
+  background-color: #F7B90A;
+}
+
+.container-pages .page-container .cards-container .card_image img {
+  height: 90%;
+}
+
+.container-pages .page-container .cards-container .card_content {
+  line-height: 20px;
+  height: 100%;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-pages .page-container .cards-container .card_content .card_title {
+  color: #F7B90A;
+  font-size: 20px;
+}
+
+.container-pages .page-container .cards-container .card_content .card_text {
+  color: #DDDDDD;
+  font-size: 14px;
+}
+
+.container-pages .page-container .cards-container .card_content .card_price {
+  font-size: 36px;
+  color: #F7B90A;
+  line-height: 36px;
+}
+
+.container-pages .page-container .cards-container .card_input {
+  width: 110px;
+  height: 35px;
+  background-color: #DDDDDD;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #642B48;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.container-pages .page-container .cards-container .card_input span {
+  cursor: pointer;
+  width: 36px;
+  border-right: 3px solid #642B48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container-pages .page-container .cards-container .card_input span:last-child {
+  border-left: 3px solid #642B48;
+  border-right: none;
+}
+
+.container-pages .page-container .cards-container::-webkit-scrollbar {
+  width: 9px;
+}
+
+.container-pages .page-container .cards-container::-webkit-scrollbar-track {
+  background: #F7B90A;
+  border-radius: 20px;
+}
+
+.container-pages .page-container .cards-container::-webkit-scrollbar-thumb {
+  background-color: #642B48;
+  border-radius: 20px;
+}
+
+.container-pages .page-container .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+}
+
+.container-pages .page-container .buttons > a:last-child .button {
+  background-color: #642B48;
+}
+
+.container-pages .page-container .buttons > a .button {
+  width: 200px;
+  padding: 16px 32px;
+  text-align: center;
+}
+/*# sourceMappingURL=container_pages.css.map */
