@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 
 const StepClient_7 = () => {
     const {
-        acai,
         setAcai,
         setRender,
         setPosition,
@@ -18,6 +17,8 @@ const StepClient_7 = () => {
         price,
         setNameClient,
         nameClient,
+        addCustomAcaiToCart,
+        acai
     } = useContext(Context);
 
     const [checked, setChecked] = useState(false);
@@ -28,22 +29,8 @@ const StepClient_7 = () => {
         console.log("CONTEUDO: " + acai.fruit);
     });
 
-    // const [name, setName] = useState('');
+    const [name, setName] = useState('');
 
-    // const handleInput = (e) => {
-    //     setName(e.target.value);
-    //     setRender(true);
-    //     setTimeout(() => setRender(false), 200);
-    //     setAcai({
-    //         size: acai.size,
-    //         fill: acai.fill,
-    //         fruit: acai.fruit,
-    //         aditional1: acai.aditional1,
-    //         roof: acai.roof,
-    //         aditional2: acai.aditional2,
-    //         client: name,
-    //     });
-    // };
 
     return (
         <div className="step-content">
@@ -84,8 +71,8 @@ const StepClient_7 = () => {
                 <Link to="/step/step6">
                     <Button text="Voltar" />
                 </Link>
-                <Link to="/step/step8">
-                    <Button text="Finalizar" />
+                <Link to="/step/step8" onClick={()=> addCustomAcaiToCart(acai)}>
+                    <Button text="Finalizar" secondary={true}/>
                 </Link>
             </div>
         </div>

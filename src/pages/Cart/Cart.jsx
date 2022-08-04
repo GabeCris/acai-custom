@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../../contexts/Context";
 import { useContext } from "react";
 import Modal from "../../components/Modal/Modal";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Cart = () => {
     const {
@@ -16,10 +18,12 @@ const Cart = () => {
         nameClient,
         modal,
         setModal,
-        priceCart,
         cart,
-        sumAmountView
+        addCustomAcaiToCart,
+        sumAmountView,
+        lengthCart,
     } = useContext(Context);
+
     return (
         <div className="page-container">
             {modal && (
@@ -34,43 +38,43 @@ const Cart = () => {
                     </Link>
                 </Modal>
             )}
-            <h1 className="title">Meu carrinho
-            <span className="card_amount">
-                [{sumAmountView}]
-            </span>
+            <h1 className="title">
+                Meu carrinho
+                <span className="card_amount">[{sumAmountView}]</span>
             </h1>
-            <div className="cards-container">
-                {cart != '' ? cart.map((item) => item.acai.amount > 0 ? (
-                    <Card
-                        title={item.acai.title}
-                        text={item.acai.details.size}
-                        price={item.acai.price}
-                        url={item.acai.url}
-                        id={item.acai.id}
-                        key={item.acai.id}
-                        amount={item.acai.amount}
-                    />
-                ): ''): (<p>Nenhum item adicionado ainda :(</p>)}
-            </div>
+            {sumAmountView > 0 ? (
+                <div className="cards-container">
+                    {cart.map((item) =>
+                        item.acai.amount > 0 ? (
+                            <Card
+                                title={item.acai.title}
+                                text={item.acai.details.size}
+                                price={item.acai.price}
+                                url={item.acai.url}
+                                id={item.acai.id}
+                                key={item.acai.id}
+                                amount={item.acai.amount}
+                                custom={item.acai.custom}
+                            />
+                        ) : (
+                            ""
+                        )
+                    )}
+                </div>
+            ) : (
+                <div className="cards-container cards-container-null">
+                    <p>Nenhum açaí foi adicionado ainda :(</p>
+                </div>
+            )}
             <div className="buttons">
                 <Link to="/">
-                    <Button text="Sair" />
+                    <Button text="Sair" secondary={false} />
                 </Link>
-                <Link to="/">
-                    <Button text="Finalizar" />
-                </Link>
-            </div>
-            <div className="price_container">
-                <p className="price-symbol">$</p>
-                <div className="price-value">
-                    <p>{priceCart}</p>
-                    <span>Total</span>
-                </div>
-                <img
-                    className="price-background"
-                    src="../assets/page/price.svg"
-                    alt="Logo do custom acai"
-                />
+                {sumAmountView != 0 && (
+                    <Link to="/page/finish">
+                        <Button text="Finalizar" secondary={true} />
+                    </Link>
+                )}
             </div>
         </div>
     );

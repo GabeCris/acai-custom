@@ -88,7 +88,8 @@ a {
 
 .acai-model {
     z-index: 2;
-    width: 32rem;
+    height: 600px;
+    // width: 32rem;
 }
 
 .open_cart {
@@ -102,9 +103,10 @@ a {
     right: 0;
     bottom: 0;
     background-color: $purple-color;
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     margin: 16px 32px;
+    border: 3px solid $gray-color;
     &-icon {
         transition: $transition;
     }
@@ -138,9 +140,28 @@ a {
 }
 
 .footer {
-    img {
-        width: 100vw;
-        height: 100%;
+    width: 100vw;
+    @include centralize();
+    padding-top: 10%;
+    position: relative;
+    gap: 64px;
+    a {
+        z-index: 2;
+        .icon {
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover {
+                transition: 0.4s;
+                transform: translateY(-15px);
+            }
+        }
+    }
+    .bg-footer {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -171,30 +192,5 @@ a {
     }
     100% {
         transform: rotate(0deg);
-    }
-}
-
-.Toastify {
-    &__toast-container {
-        width: 150px;
-        @include centralize($direction: column);
-        gap: 10px;
-        &--top-right {
-            position: fixed;
-            margin: 10px;
-            z-index: 50;
-            right: 0;
-        }
-    }
-    &__close-button {
-        display: none;
-    }
-    &__toast-body {
-        border-radius: 10px;
-        color: $gray-color;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 10px;
-        background-color: $purple-color;
     }
 }

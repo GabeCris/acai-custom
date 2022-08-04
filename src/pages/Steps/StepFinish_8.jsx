@@ -18,12 +18,12 @@ const StepFinish_8 = () => {
         setNameClient,
         nameClient,
         resetAcai,
+        addCustomAcaiToCart,
+        handleAddItemCart,
     } = useContext(Context);
 
     useEffect(() => {
         setPosition(8);
-        console.log("PAGE 2 MEU POSITION É " + position);
-        console.log("CONTEUDO: " + acai.fruit);
     });
 
     return (
@@ -36,8 +36,8 @@ const StepFinish_8 = () => {
             >
                 <h1 className="title-step">Você terminou seu açaí!</h1>
                 <div className="text">
-                    Ele foi adicionado aos seus favoritos e ao seu carrinho,
-                    então não perca tempo e vá finalizar seu pedido :D
+                    E ele já foi adicionado ao seu carrinho,
+                    então não perca tempo e corra para finalizar o seu pedido :D
                 </div>
             </motion.div>
             <div className="buttons">
@@ -45,7 +45,7 @@ const StepFinish_8 = () => {
                     <Button text="Sair" />
                 </Link>
                 <Link to="/page/cart">
-                    <Button text="Carrinho" />
+                    <Button text="Carrinho" secondary={true}/>
                 </Link>
             </div>
         </div>

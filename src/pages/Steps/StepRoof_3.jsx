@@ -31,15 +31,7 @@ const StepRoof_3 = () => {
 
         setRender(true);
         setTimeout(() => setRender(false), 200);
-        setAcai({
-            size: acai.size,
-            fill: acai.fill,
-            fruit: acai.fruit,
-            aditional1: acai.aditional1,
-            roof: clicked,
-            aditional2: acai.aditional2,
-            client: acai.client,
-        });
+        acai.acai.roof = clicked;
     };
 
     return (
@@ -60,7 +52,7 @@ const StepRoof_3 = () => {
                             icon={option.icon}
                             text={option.text}
                             handle={handleClick}
-                            param={acai.roof}
+                            param={acai.acai.roof}
                             desc={option.desc}
                             urlIcon={option.url}
                         />
@@ -72,7 +64,7 @@ const StepRoof_3 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step4">
-                    <Button text="Próximo" />
+                    <Button text="Próximo" secondary={true}/>
                 </Link>
             </div>
         </div>

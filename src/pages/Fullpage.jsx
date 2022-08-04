@@ -15,11 +15,18 @@ import Details from "../components/Details/Details";
 
 const Fullpage = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const { setModal, detailsModal, resetAcai, sumAmountView, renderCart } =
-        useContext(Context);
+    const {
+        setModal,
+        detailsModal,
+        resetAcai,
+        sumAmountView,
+        renderCart,
+        addCustomAcaiToCart,
+    } = useContext(Context);
 
     useEffect(() => {
         setModal(false);
+        // addCustomAcaiToCart();
         window.addEventListener("scroll", listenToScroll);
         resetAcai();
         return () => window.removeEventListener("scroll", listenToScroll);
@@ -40,7 +47,7 @@ const Fullpage = () => {
     return (
         <div className="page">
             {detailsModal && <Details />}
-        
+
             <Link to="/page/cart">
                 <div
                     className={`open_cart ${
@@ -52,7 +59,9 @@ const Fullpage = () => {
                     <img
                         src="./assets/page/cart.svg"
                         alt=""
-                        className={`open_cart-icon ${renderCart == true ? 'open_cart-icon-shake' : ""}`}
+                        className={`open_cart-icon ${
+                            renderCart == true ? "open_cart-icon-shake" : ""
+                        }`}
                     />
                 </div>
             </Link>
@@ -70,7 +79,6 @@ const Fullpage = () => {
                     <Link to="step/step1">
                         <Button text="Eu quero" secondary={false} />
                     </Link>
-                    {/* <input type="text" onChange={(e) => setName(e.target.value)} /> */}
                 </div>
                 <img
                     src="./assets/page/acai-model.svg"
@@ -80,10 +88,24 @@ const Fullpage = () => {
             </div>
             <Products title="Gourmet" type="gourmet"></Products>
             <Products title="Tradicional" type="traditional"></Products>
-            {/* <Products title="Tradicional"></Products> */}
             <MakeYour></MakeYour>
             <footer className="footer">
-                <img src="./assets/page/footer.svg" alt="" />
+                <a href="https://www.linkedin.com/in/gabriel-crisanto/"
+                target='_blank'>
+                    <img
+                        className="icon"
+                        src="./assets/page/linkedin.svg"
+                        alt=""
+                    />
+                </a>
+                <a href="https://github.com/GabeCris" target='_blank'>
+                <img className="icon" src="./assets/page/github.svg" alt="" />
+                </a>
+                <img
+                    className="bg-footer"
+                    src="./assets/page/footer.svg"
+                    alt=""
+                />
             </footer>
         </div>
     );

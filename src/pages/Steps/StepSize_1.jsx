@@ -34,15 +34,7 @@ const StepSize_1 = () => {
         } else if (clicked == "g") {
             setPriceSize(10);
         }
-        setAcai({
-            size: clicked,
-            fill: acai.fill,
-            fruit: acai.fruit,
-            aditional1: acai.aditional1,
-            roof: acai.roof,
-            aditional2: acai.aditional2,
-            client: acai.client,
-        });
+        acai.acai.size = clicked;
     };
 
     return (
@@ -63,7 +55,7 @@ const StepSize_1 = () => {
                             icon={option.icon}
                             text={option.text}
                             handle={handleClick}
-                            param={acai.size}
+                            param={acai.acai.size}
                             price={option.price}
                         />
                     ))}

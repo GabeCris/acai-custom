@@ -8,6 +8,10 @@
     padding: 0 $padding-desktop;
     @include centralize($justify: space-between);
     background-color: $gray-color;
+    .acai-model {
+        z-index: 2;
+        height: 600px;
+    }
     > a {
         margin: 32px;
         position: absolute;
@@ -40,23 +44,65 @@
         top: 0;
     }
     .page-container {
-        @include centralize($direction: column, $align: flex-start);
+        height: 100%;
+        @include centralize(
+            $direction: column,
+            $align: flex-start,
+            $justify: center
+        );
+        gap: 32px;
         .title {
             line-height: 36px;
             @include centralize();
             font-size: 36px;
-            span{
+            span {
                 margin-left: 6px;
                 font-size: 12px;
+            }
+            &-finish {
+                @include title_text-page(
+                    $width: 59rem,
+                    $size: 6.4rem,
+                    $line-height: 6.4rem
+                );
             }
         }
         .cards-container {
             overflow-y: auto;
-            height: 316px;
+            max-height: 316px;
             border-radius: 10px;
             width: 530px;
-            margin: 16px 0 32px 0;
+            // margin: 16px 0 32px 0;
+            &-null{
+                // margin: 32px 0;
+                height: 150px;
+            }
+            >p{
+                height: 100%;
+                @include centralize($justify: flex-start);
+                font-size: 2.4rem;
+                font-weight: 600;
+                width: 250px;
+            }
             .card {
+                &-custom {
+                    &::before {
+                        content: "CUSTOM";
+                        color: $purple-color;
+                        font-weight: bold;
+                        position: absolute;
+                        right: 16px;
+                        top: 0;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        padding-top: 10px;
+                        padding-bottom: 8px;
+                        background-color: $yellow-color;
+                        writing-mode: vertical-lr;
+                        z-index: 5;
+                    }
+                }
+                position: relative;
                 width: 475px;
                 background-color: $purple-color;
                 border-radius: 10px;
@@ -73,7 +119,13 @@
                     height: 100%;
                     width: 90px;
                     background-color: $yellow-color;
+                    position: relative;
                     img {
+                        height: 90%;
+                        position: absolute;
+                    }
+                    @include acai_layers();
+                    .cup-acai {
                         height: 90%;
                     }
                 }
@@ -139,16 +191,25 @@
             @include centralize();
             gap: 16px;
             > a {
-                &:last-child {
+                &:not(:first-child) {
                     .button {
                         background-color: $purple-color;
                     }
                 }
                 .button {
                     width: 200px;
+                    width: 200px;
                     padding: 16px 32px;
                     text-align: center;
                 }
+            }
+        }
+        .div-button {
+            .button {
+                width: 200px;
+                text-align: center;
+                padding: 16px 32px;
+                background-color: $purple-color;
             }
         }
     }

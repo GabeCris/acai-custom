@@ -35,15 +35,7 @@ const StepAditional2_6 = () => {
 
         setRender(true);
         setTimeout(() => setRender(false), 200);
-        setAcai({
-            size: acai.size,
-            fill: acai.fill,
-            fruit: acai.fruit,
-            aditional1: acai.aditional1,
-            roof: acai.roof,
-            aditional2: clicked,
-            client: acai.client,
-        });
+        acai.acai.aditional2 = clicked;
     };
 
     return (
@@ -64,7 +56,7 @@ const StepAditional2_6 = () => {
                             icon={option.icon}
                             text={option.text}
                             handle={handleClick}
-                            param={acai.aditional2}
+                            param={acai.acai.aditional2}
                             desc={option.desc}
                             urlIcon={option.url}
                         />
@@ -76,7 +68,7 @@ const StepAditional2_6 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step7">
-                    <Button text="Próximo" />
+                    <Button text="Próximo" secondary={true}/>
                 </Link>
             </div>
         </div>

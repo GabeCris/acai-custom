@@ -25,3 +25,54 @@
     font-size: $font;
     color: $gray-color;
 }
+
+@mixin acai_layers(){
+    .name-client{
+        left: 0;
+        color: $gray-color;
+        font-weight: 500;
+        font-size: 18px;
+        top: 50%;
+        transform: translateX(-100%);
+        width: 290px;
+        text-align: center;
+        position: absolute;
+        z-index: 5;
+    }
+    .roof{
+        z-index: 7;
+    }
+    .cup-acai {
+        z-index: 2;
+        height: 100%;
+        &-shadow{
+            z-index: 4;
+
+        }
+    }
+    .fill-acai {
+        z-index: 3;
+    }
+    .fruit-acai {
+        z-index: 8;
+        &-cutted{
+            z-index: 3;
+        }
+    }
+    .roof-acai {
+        z-index: 3;
+    }
+    .aditional1-acai {
+        z-index: 6;
+    }
+    .aditional2-acai {
+        z-index: 9;
+    }
+    .logo-acai{
+        z-index: 9;
+    }
+    .flag-size-acai{
+        z-index: 5;
+    }
+
+}

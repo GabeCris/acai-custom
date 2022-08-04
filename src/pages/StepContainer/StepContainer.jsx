@@ -44,7 +44,7 @@ const StepContainer = () => {
                 {position > 1 && (
                     <img
                         className="flag-size-acai"
-                        src={`../assets/page/steps/step1/size-flags/flag_size-${acai.size}.svg`}
+                        src={`../assets/page/steps/step1/size-flags/flag_size-${acai.acai.size}.svg`}
                         alt=""
                     />
                 )}
@@ -69,52 +69,52 @@ const StepContainer = () => {
                         />
                     </>
                 )}
-                {acai.fruit != " " && acai.fill == 1 && position > 1 && (
+                {acai.acai.fruit != " " && acai.acai.fill == 1 && position > 1 && (
                     <img
                         className={`fruit-acai-cutted`}
-                        src={`../assets/page/steps/step5/fruit_${acai.fruit}-cutted.svg`}
+                        src={`../assets/page/steps/step5/fruit_${acai.acai.fruit}-cutted.svg`}
                         alt=""
                     />
                 )}
-                {acai.fruit != " " && acai.fill == 2 && position > 1 && (
+                {acai.acai.fruit != " " && acai.acai.fill == 2 && position > 1 && (
                     <img
                         className={`fruit-acai-cutted`}
-                        src={`../assets/page/steps/step5/double-cutted/fruit_${acai.fruit}-double-cutted.svg`}
+                        src={`../assets/page/steps/step5/double-cutted/fruit_${acai.acai.fruit}-double-cutted.svg`}
                         alt=""
                     />
                 )}
-                {acai.fill != 0 && position > 1 && (
+                {acai.acai.fill != 0 && position > 1 && (
                     <img
                         className={`fill-acai`}
-                        src={`../assets/page/steps/step2/fill_${acai.fill}.svg`}
+                        src={`../assets/page/steps/step2/fill_${acai.acai.fill}.svg`}
                         alt=""
                     />
                 )}
-                {acai.roof != " " && position > 1 && (
+                {acai.acai.roof != " " && position > 1 && (
                     <img
                         className={`roof-acai`}
-                        src={`../assets/page/steps/step3/roof_${acai.roof}.svg`}
+                        src={`../assets/page/steps/step3/roof_${acai.acai.roof}.svg`}
                         alt=""
                     />
                 )}
-                {acai.aditional1 != " " && position > 1 && (
+                {acai.acai.aditional1 != " " && position > 1 && (
                     <img
                         className={`aditional1-acai`}
-                        src={`../assets/page/steps/step4/aditional1_${acai.aditional1}.svg`}
+                        src={`../assets/page/steps/step4/aditional1_${acai.acai.aditional1}.svg`}
                         alt=""
                     />
                 )}
-                {acai.aditional2 != " " && position > 1 && (
+                {acai.acai.aditional2 != " " && position > 1 && (
                     <img
                         className={`aditional2-acai`}
-                        src={`../assets/page/steps/step6/aditional2_${acai.aditional2}.svg`}
+                        src={`../assets/page/steps/step6/aditional2_${acai.acai.aditional2}.svg`}
                         alt=""
                     />
                 )}
-                {acai.fruit != " " && position > 1 && (
+                {acai.acai.fruit != " " && position > 1 && (
                     <img
                         className={`fruit-acai`}
-                        src={`../assets/page/steps/step5/fruit_${acai.fruit}.svg`}
+                        src={`../assets/page/steps/step5/fruit_${acai.acai.fruit}.svg`}
                         alt=""
                     />
                 )}

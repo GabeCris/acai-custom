@@ -16,9 +16,7 @@
         width: 9.6rem;
         height: 9.6rem;
         @include centralize();
-        background-color: $purple-color;
-        // background-color: #642b48b7;
-        // background-colorgba(100, 43, 72, 0.515)ple-color;
+        background-color: $yellow-color;
         position: relative;
         border-radius: 50%;
     }
@@ -38,7 +36,6 @@
         }
     }
     .option-selected{
-        // background-color: $purple-color;
-        background-color: $yellow-color;
+        background-color: $purple-color;
     }
 }

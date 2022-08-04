@@ -32,11 +32,11 @@ const Button = ({ text, secondary, handle, id, size }) => {
 
             {text}
             {secondary == true ? (
-                <img src="./assets/page/button-detail-secondary.svg" alt="" />
+                <img src="../assets/page/button-detail-secondary.svg" alt="" />
                 )
                 :
                 (
-                    <img src="./assets/page/button-detail.svg" alt="" />
+                    <img src="../assets/page/button-detail.svg" alt="" />
         )}
         </div>
     );

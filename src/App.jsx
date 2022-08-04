@@ -17,6 +17,7 @@ import { AnimatePresence } from "framer-motion";
 import Modal from "./components/Modal/Modal";
 import ContainerPages from "./pages/ContainerPages/ContainerPages";
 import Cart from "./pages/Cart/Cart";
+import FinishOrder from "./pages/FinishOrder/FinishOrder";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
                         </Route>
                         <Route path="/page" element={<ContainerPages/>}>
                             <Route path="cart" element={<Cart />} />
+                            <Route path="finish" element={<FinishOrder/>} />
                         </Route>
                     </Routes>
                 </BrowserRouter>
