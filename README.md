@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<p align="center">
+<img src="./public/assets/page/readme_logo.svg">
+</p>
+<h2 align="center"> - Custom Açaí -</h2>
+<p align="center">
+<a href="https://custom-acai.netlify.app/" target="_blank">👉 Acesse a página aqui 👈</a>
+</p>
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## - Projeto Custom Açaí - 
+<br>
+Sem dúvidas o melhor projeto do portifólio!!<br>Se trata de uma página de uma açaitería que simula um ecommerce, que além de podermos adicionar os açaís do cardápio no carrinho, podemos criar os nossos próprios e vê-los como fica em tempo real! Legal né?
+<br>
+<br>
+<!-- <img src="./public/assets/Cine-Code.gif"> -->
 
-## Available Scripts
+## - Funcionalidades -
+<br>
+<p>
+◽ Customizar passo a passo açaí
+</p>
+<p>
+◽ Adicionar açaí customizado no carrinho
+</p>
+<p>
+◽ Adicionar açaís do cardápio no carrinho
+</p>
+<p>
+◽ Visualizar detalhes dos acaís padrões
+</p>
+<p>
+◽ Visualizar acaís do carrinho
+</p>
+<p>
+◽ Manipular quantidade de açaís no carrinho
+</p>
+<p>
+◽ Finalizar compras do carrinho
+</p>
+<br>
 
-In the project directory, you can run:
+## - Tecnologias utilizadas -
+<br>
+<!-- HTML -->
+<!-- REACT -->
+<img align="center" alt="React" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+<b> React</b>
+<br>
+<br>
+<img align="center"  alt="HTML" width="30" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> <b> HTML 5</b></
+<br>
+<br>
+<br>
+<!-- CSS -->
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="30" height="40"/><b> Sass</b>
+<br>
 
-### `npm start`
+<br>
+ <img align="center" alt="Figma" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+<b> Figma</b>
+<br>
+<br>
+<img src="./public/assets/page/print_figma.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## - Meus contatos -
+<br>
+<p>Sinta-se livre para entrar em contato comigo, seja para dar algum feedback do projeto, pedir alguma ajuda ou também apenas conversar um pouco sobre desenvolvimento e tecnologias =D</p>
+<br>
+<div> 
+  <a href = "mailto:gabrecrisanto@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank</a>
+  
+  <a href="https://api.whatsapp.com/send?phone=5541984818428" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a> 
+  <a href="https://www.linkedin.com/in/gabriel-crisanto/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href="https://github.com/GabeCris" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+  </div>
