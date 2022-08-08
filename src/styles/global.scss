@@ -10,12 +10,22 @@
     user-select: none;
 }
 
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
+
 html {
     font-size: 10px;
     overflow-x: hidden;
 }
 
-body{
+body {
     position: relative;
     width: 100vw;
     min-height: 100vh;
