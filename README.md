@@ -43,23 +43,14 @@ Sem dúvidas o melhor projeto do portifólio!!<br>Se trata de uma página de uma
 <br>
 <!-- HTML -->
 <!-- REACT -->
-<img align="center" alt="React" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-<b> React</b>
-<br>
-<br>
-<img align="center"  alt="HTML" width="30" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> <b> HTML 5</b></
-<br>
-<br>
-<br>
+<img align="center" alt="React" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="margin-right: 25px"/> 
+<img align="center"  alt="HTML" width="30" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" style="margin-right: 25px"/>
 <!-- CSS -->
-<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="30" height="40"/><b> Sass</b>
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="30" height="40" style="margin-right: 25px"/>
+ <img align="center" alt="Figma" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+<br>
 <br>
 
-<br>
- <img align="center" alt="Figma" height="40" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-<b> Figma</b>
-<br>
-<br>
 <img src="./public/assets/page/print_figma.png">
 
 <br>
