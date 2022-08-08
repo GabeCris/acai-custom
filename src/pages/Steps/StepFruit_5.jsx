@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 const StepFruit_3 = () => {
     const {
         acai,
-        setAcai,
         setRender,
         setPosition,
         position,
@@ -22,8 +21,6 @@ const StepFruit_3 = () => {
 
     useEffect(() => {
         setPosition(5);
-        console.log("PAGE 2 MEU POSITION É " + position);
-        console.log("CONTEUDO: " + acai.fruit);
     });
 
     const handleClick = (e) => {
@@ -58,7 +55,7 @@ const StepFruit_3 = () => {
                 <div className="text">Qual fruta mais gosta?</div>
 
                 <div className="options">
-                    {Data.map((option, index) => (
+                    {Data.map((option) => (
                         <OptionStep
                             content={option.content}
                             icon={option.icon}
@@ -76,7 +73,7 @@ const StepFruit_3 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step6">
-                    <Button text="Próximo" secondary={true}/>
+                    <Button text="Próximo" secondary={true} />
                 </Link>
             </div>
         </div>

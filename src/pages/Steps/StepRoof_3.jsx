@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
@@ -8,9 +8,9 @@ import Data from "../../data/DataStep3.js";
 import { motion } from "framer-motion";
 
 const StepRoof_3 = () => {
-    const { acai, setAcai, setRender, setPosition, position, setPrice, price, flag, setFlag } =
-    useContext(Context);
-    
+    const { acai, setRender, setPosition, setPrice, price, flag, setFlag } =
+        useContext(Context);
+
     useEffect(() => {
         setPosition(3);
     });
@@ -19,12 +19,12 @@ const StepRoof_3 = () => {
         const clicked = e.target.value;
         if (clicked != " ") {
             if (flag.roof) {
-                setFlag({...flag, roof: false})
+                setFlag({ ...flag, roof: false });
                 setPrice(price + 2);
             }
         } else {
             if (!flag.roof) {
-                setFlag({...flag, roof: true})
+                setFlag({ ...flag, roof: true });
                 setPrice(price - 2);
             }
         }
@@ -64,7 +64,7 @@ const StepRoof_3 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step4">
-                    <Button text="Próximo" secondary={true}/>
+                    <Button text="Próximo" secondary={true} />
                 </Link>
             </div>
         </div>

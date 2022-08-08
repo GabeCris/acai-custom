@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Text = ({text}) => {
-  return (
-    <p className='text'>{text}</p>
-  )
-}
+const Text = ({ text }) => {
+    return <p className="text">{text}</p>;
+};
 
-export default Text
+export default Text;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
@@ -6,24 +6,17 @@ import { Link } from "react-router-dom";
 import "../StepContainer/step.scss";
 import Data from "../../data/DataStep1.js";
 import { motion } from "framer-motion";
-import Modal from "../../components/Modal/Modal";
+import LoadPage from "../LoadPage/LoadPage";
+
 
 const StepSize_1 = () => {
-    const {
-        acai,
-        setAcai,
-        setPriceSize,
-        setPosition,
-        position,
-        setRender,
-        setModal,
-        modal,
-    } = useContext(Context);
+    const { acai, setPriceSize, setPosition, setModal, modal, load, setLoad } =
+        useContext(Context);
 
     useEffect(() => {
         setPosition(1);
-        console.log("PAGE 1 MEU POSITION É " + position);
     });
+    
 
     const handleClick = (e) => {
         const clicked = e.target.value;
@@ -39,6 +32,12 @@ const StepSize_1 = () => {
 
     return (
         <div className="step-content">
+            {load && (
+                <LoadPage
+                    text={"Preparando ingredientes..."}
+                    textLoaded={"Ingredientes prontos!"}
+                />
+            )}
             <motion.div
                 className="step-transition"
                 initial={{ translateX: -window.innerWidth * 2 }}

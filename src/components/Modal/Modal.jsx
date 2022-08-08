@@ -3,15 +3,13 @@ import "./modal.scss";
 import { Context } from "../../contexts/Context";
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import Button from "../Button/Button";
-import { Link } from "react-router-dom";
 
-const Modal = ({ button1, button2, title, text, children }) => {
+const Modal = ({ title, text, children }) => {
     const { modal, setModal } = useContext(Context);
 
-    const changeModal = () =>{
-        setModal(!modal)
-    }
+    const changeModal = () => {
+        setModal(!modal);
+    };
     return (
         <div className={`modal-container`}>
             <motion.div
@@ -23,7 +21,9 @@ const Modal = ({ button1, button2, title, text, children }) => {
                 <h1 className="title-modal">{title}</h1>
                 <p className="text-modal">{text}</p>
                 <div className="buttons">
-                    <div className="button-modal" onClick={changeModal}>Fechar</div>
+                    <div className="button-modal" onClick={changeModal}>
+                        Fechar
+                    </div>
                     {children}
                 </div>
             </motion.div>

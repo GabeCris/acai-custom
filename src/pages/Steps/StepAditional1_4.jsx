@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
@@ -8,7 +8,7 @@ import Data from "../../data/DataStep4.js";
 import { motion } from "framer-motion";
 
 const StepAditional1_3 = () => {
-    const { acai, setAcai, setRender, setPosition, position, setPrice, price, flag, setFlag } =
+    const { acai, setRender, setPosition, setPrice, price, flag, setFlag } =
         useContext(Context);
 
     useEffect(() => {
@@ -20,12 +20,12 @@ const StepAditional1_3 = () => {
 
         if (clicked != " ") {
             if (flag.aditional1) {
-                setFlag({...flag, aditional1: false})
+                setFlag({ ...flag, aditional1: false });
                 setPrice(price + 2);
             }
         } else {
             if (!flag.aditional1) {
-                setFlag({...flag, aditional1: true})
+                setFlag({ ...flag, aditional1: true });
                 setPrice(price - 2);
             }
         }
@@ -47,7 +47,7 @@ const StepAditional1_3 = () => {
                 <div className="text">Qual ingrediente adicional?</div>
 
                 <div className="options">
-                    {Data.map((option, index) => (
+                    {Data.map((option) => (
                         <OptionStep
                             content={option.content}
                             icon={option.icon}
@@ -65,7 +65,7 @@ const StepAditional1_3 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step5">
-                    <Button text="Próximo" secondary={true}/>
+                    <Button text="Próximo" secondary={true} />
                 </Link>
             </div>
         </div>

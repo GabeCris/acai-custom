@@ -1,10 +1,8 @@
 import React from "react";
-import LogoPage from "../../components/LogoPage/LogoPage";
 import { Outlet, Link } from "react-router-dom";
 import "./step.scss";
 import { Context } from "../../contexts/Context";
 import { useContext } from "react";
-import { useState } from "react";
 import ProgressData from "../../data/DataProgress.js";
 import Modal from "../../components/Modal/Modal";
 
@@ -20,7 +18,6 @@ const StepContainer = () => {
         setModal,
     } = useContext(Context);
 
-    // console.log("O PRICE DO ACAI É " + acai.price);
     return (
         <div className="step-container">
             {modal && (
@@ -28,8 +25,10 @@ const StepContainer = () => {
                     title="Atenção"
                     text="Se sair perderá seu progresso e o açaí será esquecido :("
                 >
-                    <Link to='/'>
-                    <div className="button-modal button-modal-secondary">Sair</div>
+                    <Link to="/">
+                        <div className="button-modal button-modal-secondary">
+                            Menu
+                        </div>
                     </Link>
                 </Modal>
             )}
@@ -40,7 +39,6 @@ const StepContainer = () => {
             />
             <Outlet></Outlet>
             <div className={`custom-acai ${render ? "render-element" : ""}`}>
-                {/* <img className="roof" src="../assets/page/steps/COBERTURA.svg" alt="" /> */}
                 {position > 1 && (
                     <img
                         className="flag-size-acai"
@@ -69,20 +67,24 @@ const StepContainer = () => {
                         />
                     </>
                 )}
-                {acai.acai.fruit != " " && acai.acai.fill == 1 && position > 1 && (
-                    <img
-                        className={`fruit-acai-cutted`}
-                        src={`../assets/page/steps/step5/fruit_${acai.acai.fruit}-cutted.svg`}
-                        alt=""
-                    />
-                )}
-                {acai.acai.fruit != " " && acai.acai.fill == 2 && position > 1 && (
-                    <img
-                        className={`fruit-acai-cutted`}
-                        src={`../assets/page/steps/step5/double-cutted/fruit_${acai.acai.fruit}-double-cutted.svg`}
-                        alt=""
-                    />
-                )}
+                {acai.acai.fruit != " " &&
+                    acai.acai.fill == 1 &&
+                    position > 1 && (
+                        <img
+                            className={`fruit-acai-cutted`}
+                            src={`../assets/page/steps/step5/fruit_${acai.acai.fruit}-cutted.svg`}
+                            alt=""
+                        />
+                    )}
+                {acai.acai.fruit != " " &&
+                    acai.acai.fill == 2 &&
+                    position > 1 && (
+                        <img
+                            className={`fruit-acai-cutted`}
+                            src={`../assets/page/steps/step5/double-cutted/fruit_${acai.acai.fruit}-double-cutted.svg`}
+                            alt=""
+                        />
+                    )}
                 {acai.acai.fill != 0 && position > 1 && (
                     <img
                         className={`fill-acai`}
@@ -138,24 +140,19 @@ const StepContainer = () => {
                     alt="Logo do custom acai"
                 />
             </div>
-            <div className="progress-bar">
-                {position == 8 && (
-                    <img
-                        className="smile-progress"
-                        src="../assets/page/steps/smile-progress.svg"
-                        alt=""
-                    />
-                )}
-                {ProgressData.map((pos, index) => (
-                    <div
-                        className={`progress ${
-                            index + 1 <= position ? "progress-active" : ""
-                        }`}
-                    >
-                        {index + 1}
-                    </div>
-                ))}
-            </div>
+            {position != 8 && (
+                <div className="progress-bar">
+                    {ProgressData.map((pos, index) => (
+                        <div
+                            className={`progress ${
+                                index + 1 <= position ? "progress-active" : ""
+                            }`}
+                        >
+                            {index + 1}
+                        </div>
+                    ))}
+                </div>
+            )}
             <img className="step-bg" src="../assets/page/bg-step.svg" alt="" />
             <div className="close-icon" onClick={() => setModal(!modal)}>
                 <img src="../assets/page/close-icon.svg" alt="" />

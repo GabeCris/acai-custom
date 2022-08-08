@@ -1,37 +1,36 @@
-const url = './assets/page/steps/step3/icons/'
+const url = "./assets/page/steps/step3/icons/";
 
 const options = [
     {
-        content: ' ',
+        content: " ",
         icon: true,
         text: "Nenhuma",
-        url: `${url}roof_any.svg`
+        url: `${url}roof_any.svg`,
     },
     {
-        content: 'milk',
+        content: "milk",
         icon: true,
         text: "L. Conden.",
-        url: `${url}roof_milk.svg`
+        url: `${url}roof_milk.svg`,
     },
     {
-        content: 'nutella',
+        content: "nutella",
         icon: true,
         text: "Nutella",
-        url: `${url}roof_nutella.svg`
+        url: `${url}roof_nutella.svg`,
     },
     {
-        content: 'caramel',
+        content: "caramel",
         icon: true,
-        text: "Caramelo",
-        url: `${url}roof_caramel.svg`
+        text: "Doce Leite",
+        url: `${url}roof_caramel.svg`,
     },
     {
-        content: 'raspberry',
+        content: "raspberry",
         icon: true,
         text: "Framboesa",
-        url: `${url}roof_raspberry.svg`
+        url: `${url}roof_raspberry.svg`,
     },
-    
 ];
 
 export default options;

@@ -1,31 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../../components/Card/Card";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { Context } from "../../contexts/Context";
 import { useContext } from "react";
 import Modal from "../../components/Modal/Modal";
-import { useEffect } from "react";
-import { useState } from "react";
+import LoadPage from "../LoadPage/LoadPage";
 
 const Cart = () => {
-    const {
-        acai,
-        render,
-        price,
-        position,
-        priceSize,
-        nameClient,
-        modal,
-        setModal,
-        cart,
-        addCustomAcaiToCart,
-        sumAmountView,
-        lengthCart,
-    } = useContext(Context);
+    const { modal, cart, sumAmountView, setLoad, load } = useContext(Context);
+
+    useEffect(() => {
+        setLoad(true);
+    }, []);
 
     return (
         <div className="page-container">
+            {load && (
+                <LoadPage
+                    text={"Organizando carrinho..."}
+                    textLoaded={"Carrinho pronto!"}
+                />
+            )}
             {modal && (
                 <Modal
                     title="Atenção"
@@ -68,7 +64,7 @@ const Cart = () => {
             )}
             <div className="buttons">
                 <Link to="/">
-                    <Button text="Sair" secondary={false} />
+                    <Button text="Menu" secondary={false} />
                 </Link>
                 {sumAmountView != 0 && (
                     <Link to="/page/finish">

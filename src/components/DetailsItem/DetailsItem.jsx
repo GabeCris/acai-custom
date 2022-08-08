@@ -1,27 +1,15 @@
 import React from "react";
 import "../Details/details.scss";
-import { Context } from "../../contexts/Context";
-import { useContext } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import Card from "../Card/Card";
 
-
-const DetailsItem = ({ title, item, img, subtitle, image, initial }) => {
-    const { idDetails, details } = useContext(Context);
-
-    // const changeDetails = () =>{
-    //     DataGourmet.filter((card) => card.id == clicked ? console.log(card.acai) : '')
-    // }
-    console.log("FRUTA "+image)
+const DetailsItem = ({ title, subtitle, image, initial }) => {
+    console.log("FRUTA " + image);
     return (
         <div className="details_item-container">
             <p className="details_item-title">{title}</p>
             <div className="details_item-box">
-                {initial ? 
-                (
+                {initial ? (
                     <img src={`${initial}${image}.svg`} alt="" />
-                ):(
+                ) : (
                     <p>{image}</p>
                 )}
             </div>

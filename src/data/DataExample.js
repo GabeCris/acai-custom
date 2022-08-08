@@ -1,7 +1,9 @@
-const example = [{
-    acai: {
-        name: 'Gabriel'
-    }
-}]
+const example = [
+    {
+        acai: {
+            name: "Gabriel",
+        },
+    },
+];
 
 export default example;

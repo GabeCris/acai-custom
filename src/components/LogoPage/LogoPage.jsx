@@ -6,7 +6,7 @@ const LogoPage = () => {
         <>
             <img
                 className="logo_page"
-                src="./assets/page/logo_custom-acai.svg"
+                src="../assets/page/logo_custom-acai.svg"
                 alt="Logo do custom acai"
             />
         </>

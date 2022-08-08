@@ -1,35 +1,35 @@
-const url = './assets/page/steps/step4/icons/'
+const url = "./assets/page/steps/step4/icons/";
 
 const options = [
     {
-        content: ' ',
+        content: " ",
         icon: true,
         text: "Nenhuma",
-        url: `${url}aditional1_any.svg`
+        url: `${url}aditional1_any.svg`,
     },
     {
-        content: 'confetti',
+        content: "confetti",
         icon: true,
         text: "Confetes",
-        url: `${url}aditional1_confetti.svg`
+        url: `${url}aditional1_confetti.svg`,
     },
     {
-        content: 'peanut',
+        content: "peanut",
         icon: true,
         text: "Amendoim",
-        url: `${url}aditional1_peanut.svg`
+        url: `${url}aditional1_peanut.svg`,
     },
     {
-        content: 'granulated',
+        content: "granulated",
         icon: true,
         text: "Granulado",
-        url: `${url}aditional1_granulated.svg`
+        url: `${url}aditional1_granulated.svg`,
     },
     {
-        content: 'chocoball',
+        content: "chocoball",
         icon: true,
         text: "Chocobol",
-        url: `${url}aditional1_chocoball.svg`
+        url: `${url}aditional1_chocoball.svg`,
     },
 ];
 

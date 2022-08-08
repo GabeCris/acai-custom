@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
-import Data from "../../data/DataExample";
 import DataGourmet from "../../data/DataMenuGourmet";
 import DataTraditional from "../../data/DataMenuTraditional";
 import "../../pages/StepContainer/step.scss";
@@ -8,15 +6,13 @@ import { useContext } from "react";
 import { Context } from "../../contexts/Context";
 
 const Card = ({ title, text, price, url, amount, id, custom }) => {
-    const { cart, handleAddItemCart, removeItemCart, acai, customCart } =
+    const { cart, handleAddItemCart, removeItemCart, customCart } =
         useContext(Context);
 
     useEffect(() => {
-        console.log('MEU CART É')
-        console.log(customCart)
+        console.log("MEU CART É");
+        console.log(customCart);
     }, []);
-
-    const [copyCart, setCopyCart] = useState([]);
 
     const data = [...DataGourmet, ...DataTraditional, ...customCart];
 

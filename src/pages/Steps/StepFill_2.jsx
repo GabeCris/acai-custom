@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../../contexts/Context";
 import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
@@ -8,12 +8,11 @@ import Data from "../../data/DataStep2.js";
 import { motion } from "framer-motion";
 
 const StepFill_2 = () => {
-    const { acai, setAcai, setRender, setPosition, position, setFlag, flag, price, setPrice } =
+    const { acai, setRender, setPosition, setFlag, flag, price, setPrice } =
         useContext(Context);
 
     useEffect(() => {
         setPosition(2);
-        console.log("PAGE 2 MEU POSITION É " + position);
     });
 
     const handleClick = (e) => {
@@ -21,12 +20,12 @@ const StepFill_2 = () => {
 
         if (clicked == 1 || clicked == 2) {
             if (flag.fill) {
-                setFlag({...flag, fill: false})
+                setFlag({ ...flag, fill: false });
                 setPrice(price + 1);
             }
         } else {
             if (!flag.fill) {
-                setFlag({...flag, fill: true})
+                setFlag({ ...flag, fill: true });
                 setPrice(price - 1);
             }
         }
@@ -47,8 +46,7 @@ const StepFill_2 = () => {
                 <div className="text">Quantas camadas de recheio?</div>
 
                 <div className="options">
-                    {Data.map((option, index) => 
-                        (
+                    {Data.map((option) => (
                         <OptionStep
                             content={option.content}
                             icon={option.icon}
@@ -65,7 +63,7 @@ const StepFill_2 = () => {
                     <Button text="Voltar" />
                 </Link>
                 <Link to="/step/step3">
-                    <Button text="Próximo" secondary={true}/>
+                    <Button text="Próximo" secondary={true} />
                 </Link>
             </div>
         </div>

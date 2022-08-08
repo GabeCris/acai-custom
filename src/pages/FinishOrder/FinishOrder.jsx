@@ -6,23 +6,37 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Modal from "../../components/Modal/Modal";
 import { Context } from "../../contexts/Context";
+import { useEffect } from "react";
+import LoadPage from "../LoadPage/LoadPage";
 
 const FinishOrder = () => {
-    const { setModal, modal, priceCart } = useContext(Context);
+    const { setModal, modal, priceCart, load, setLoad } = useContext(Context);
     const [param, setParam] = useState("money");
 
     const handleClick = (e) => {
         setParam(e.target.value);
     };
 
+    useEffect(() => {
+        setLoad(true);
+    }, []);
+
     return (
         <div className="page-container">
+            {load && (
+                <LoadPage
+                    text={"Calculando pedido..."}
+                    textLoaded={"Pedido calculado!"}
+                />
+            )}
             {modal && (
                 <Modal
                     title="Atenção"
                     text={`Deseja finalizar a sua compra com ${Data.filter(
                         (option) => option.content == param
-                    ).map((option) => option.text)} no valor de R$${priceCart}?`}
+                    ).map(
+                        (option) => option.text
+                    )} no valor de R$${priceCart}?`}
                 >
                     <Link to="/">
                         <div className="button-modal button-modal-secondary">
@@ -36,7 +50,7 @@ const FinishOrder = () => {
             </h1>
             <div className="text">Informe a forma de pagamento:</div>
             <div className="options">
-                {Data.map((option, index) => (
+                {Data.map((option) => (
                     <OptionStep
                         content={option.content}
                         icon={option.icon}

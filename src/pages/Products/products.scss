@@ -11,6 +11,7 @@
         @include centralize($justify: flex-start);
         font-size: 3.6rem;
         line-height: 50px;
+        z-index: 3;
     }
     &_row{
         width: 100%;

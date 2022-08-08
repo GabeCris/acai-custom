@@ -15,6 +15,12 @@ html {
     overflow-x: hidden;
 }
 
+body{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
 }
@@ -23,14 +29,23 @@ a {
 .text {
     color: $purple-color;
 }
-
 .page {
     position: relative;
     @include centralize($direction: column);
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     padding: 0 $padding-desktop;
     background-color: $gray-color;
+    @media screen {
+        @media (min-width: 1650px) {
+            padding: 0 33.2rem;
+        }
+    }
+    @media screen {
+        @media (max-width: 1189px) {
+            padding: 0 10rem;
+        }
+    }
 }
 
 .home {
@@ -50,6 +65,7 @@ a {
 .content {
     @include centralize(center, flex-start, column);
     gap: 32px;
+    z-index: 3;
 }
 
 .button {

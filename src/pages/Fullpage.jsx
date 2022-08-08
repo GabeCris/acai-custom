@@ -7,11 +7,10 @@ import Button from "../components/Button/Button";
 import Products from "./Products/Products";
 import MakeYour from "./MakeYour/MakeYour";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Context } from "../contexts/Context";
 import Details from "../components/Details/Details";
+import LoadPage from "./LoadPage/LoadPage";
 
 const Fullpage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,12 +20,13 @@ const Fullpage = () => {
         resetAcai,
         sumAmountView,
         renderCart,
-        addCustomAcaiToCart,
+        load,
+        setLoad,
     } = useContext(Context);
 
     useEffect(() => {
+        setLoad(true);
         setModal(false);
-        // addCustomAcaiToCart();
         window.addEventListener("scroll", listenToScroll);
         resetAcai();
         return () => window.removeEventListener("scroll", listenToScroll);
@@ -47,7 +47,12 @@ const Fullpage = () => {
     return (
         <div className="page">
             {detailsModal && <Details />}
-
+            {load && (
+                <LoadPage
+                    text={"Ajeitando a açaiteria..."}
+                    textLoaded={"Açaiteria pronta!"}
+                />
+            )}
             <Link to="/page/cart">
                 <div
                     className={`open_cart ${
@@ -76,9 +81,11 @@ const Fullpage = () => {
                 <div className="content">
                     <TitlePage title="AQUI VOCÊ MONTA O SEU AÇAÍ" />
                     <Text text="Escolha o jeitinho do seu açaí, e nós entregaremos no conforto da sua casa" />
-                    <Link to="step/step1">
-                        <Button text="Eu quero" secondary={false} />
-                    </Link>
+                    <div onClick={()=>setLoad(true)}>
+                        <Link to="step/step1">
+                            <Button text="Eu quero" secondary={false} />
+                        </Link>
+                    </div>
                 </div>
                 <img
                     src="./assets/page/acai-model.svg"
@@ -90,16 +97,22 @@ const Fullpage = () => {
             <Products title="Tradicional" type="traditional"></Products>
             <MakeYour></MakeYour>
             <footer className="footer">
-                <a href="https://www.linkedin.com/in/gabriel-crisanto/"
-                target='_blank'>
+                <a
+                    href="https://www.linkedin.com/in/gabriel-crisanto/"
+                    target="_blank"
+                >
                     <img
                         className="icon"
                         src="./assets/page/linkedin.svg"
                         alt=""
                     />
                 </a>
-                <a href="https://github.com/GabeCris" target='_blank'>
-                <img className="icon" src="./assets/page/github.svg" alt="" />
+                <a href="https://github.com/GabeCris" target="_blank">
+                    <img
+                        className="icon"
+                        src="./assets/page/github.svg"
+                        alt=""
+                    />
                 </a>
                 <img
                     className="bg-footer"

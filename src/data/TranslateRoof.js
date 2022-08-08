@@ -1,16 +1,16 @@
-const items= [
+const items = [
     {
-        roof: ['caramel', 'Doce Leite'],
+        roof: ["caramel", "Doce Leite"],
     },
     {
-        roof: ['nutella', 'Nutella'],
+        roof: ["nutella", "Nutella"],
     },
     {
-        roof: ['milk', 'Leite Cond'],
+        roof: ["milk", "Leite Cond"],
     },
     {
-        roof: ['raspberry', 'Framboesa'],
-    }
-]
+        roof: ["raspberry", "Framboesa"],
+    },
+];
 
 export default items;

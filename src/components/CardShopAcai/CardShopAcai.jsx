@@ -1,21 +1,9 @@
 import React from "react";
 import "./card_acai.scss";
 import Button from "../Button/Button";
-import { Context } from "../../contexts/Context";
-import { useState, useContext } from "react";
-import DataGourmet from "../../data/DataMenuGourmet";
-import DataTraditional from "../../data/DataMenuTraditional";
+import { useState } from "react";
 
 const CardShopAcai = ({ title, size, price, url, id, handleClick }) => {
-    const {
-        detailsModal,
-        setDetailsModal,
-        handleAddItemCart,
-        idDetails,
-        handleSize,
-    } = useContext(Context);
-    // console.log("MEU ID É "+id)
-
     const sizes = [
         {
             title: "p",
@@ -39,7 +27,13 @@ const CardShopAcai = ({ title, size, price, url, id, handleClick }) => {
             <p className="price">${price}</p>
 
             <img className="card-shop_image" src={url} />
-            <Button text="Adicionar" secondary={true} handle={true} id={id} size={sizeChanged}/>
+            <Button
+                text="Adicionar"
+                secondary={true}
+                handle={true}
+                id={id}
+                size={sizeChanged}
+            />
             <img
                 className="card-shop_icon-detail"
                 src="./assets/page/icon-detail.svg"

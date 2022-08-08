@@ -14,7 +14,7 @@ const data = [
             aditional2: "kitkat",
             price: 16,
             url: `${url}/acai_gourmet-1.svg`,
-            priceAmount : 0,
+            priceAmount: 0,
             details: {
                 size: "Pequeno",
                 fill: "Camadas",
@@ -38,7 +38,7 @@ const data = [
             aditional2: "any",
             price: 14,
             url: `${url}/acai_gourmet-2.svg`,
-            
+
             details: {
                 size: "Pequeno",
                 fill: "Camadas",

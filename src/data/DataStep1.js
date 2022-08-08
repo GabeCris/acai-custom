@@ -4,21 +4,21 @@ const options = [
         icon: false,
         text: "Pequeno",
         desc: "p",
-        price: 6
+        price: 6,
     },
     {
         content: "m",
         icon: false,
         text: "Médio",
         desc: "m",
-        price: 8
+        price: 8,
     },
     {
         content: "g",
         icon: false,
         text: "Grande",
         desc: "g",
-        price: 10
+        price: 10,
     },
 ];
 

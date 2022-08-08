@@ -8,7 +8,18 @@
     padding: 0 $padding-desktop;
     @include centralize($justify: space-between);
     background-color: $gray-color;
+    @media screen {
+        @media (min-width: 1650px) {
+            padding: 0 33.2rem;
+        }
+    }
+    @media screen {
+        @media (max-width: 1189px) {
+            padding: 0 10rem;
+        }
+    }
     .step-content {
+        z-index: 3;
         span {
             text-transform: uppercase;
         }
@@ -108,7 +119,7 @@
         height: 10px;
         bottom: 32px;
         left: 0;
-        z-index: 10;
+        z-index: 2;
         .smile-progress{
             width: 50px;
             position: absolute;
@@ -153,6 +164,8 @@
 .disable-input_name-client{
     @include centralize();
     gap: 8px;
+    line-height: 18px;
+    margin-bottom: 32px;
     font-size: 14px;
     cursor: pointer;
 }
@@ -165,6 +178,7 @@
     width: calc(20rem - 30px);
     height: 12rem;
     gap: 8px;
+    z-index: 2;
     .price-background {
         position: absolute;
         bottom: 0;

@@ -1,16 +1,16 @@
-const items = [ 
+const items = [
     {
-        fruit: ['graper', 'Uva'],
+        fruit: ["graper", "Uva"],
     },
     {
-        fruit: ['strawberry', 'Morango'],
+        fruit: ["strawberry", "Morango"],
     },
     {
-        fruit: ['banana', 'Banana'],
+        fruit: ["banana", "Banana"],
     },
     {
-        fruit: ['kiwi', 'Kiwi'],
-    }
-]
+        fruit: ["kiwi", "Kiwi"],
+    },
+];
 
 export default items;

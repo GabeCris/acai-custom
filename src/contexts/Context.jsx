@@ -14,6 +14,7 @@ const ContextProvider = ({ children }) => {
     const [idDetails, setIdDetails] = useState(2);
     const [priceCart, setPriceCart] = useState(0);
     const [idAcai, setIdAcai] = useState(20);
+    const [load, setLoad] = useState(false);
 
     const [flag, setFlag] = useState({
         aditional1: true,
@@ -26,7 +27,7 @@ const ContextProvider = ({ children }) => {
     const resetAcai = () => {
         setPrice(0);
         setPriceSize(6);
-        setNameClient("")
+        setNameClient("");
         setAcai({
             acai: {
                 id: "",
@@ -54,12 +55,10 @@ const ContextProvider = ({ children }) => {
     };
 
     const [cart, setCart] = useState([]);
-    // const [lengthCart, setLengthCart] = useState(cart.length);
     const [sumAmountView, setAmountView] = useState(0);
     const [customCart, setCustomCart] = useState([]);
 
     const handleAddItemCart = (item) => {
-        console.log("item adicionado");
         const copyCart = [...cart];
         const copyCustom = [];
         const found = copyCart.find(
@@ -70,21 +69,8 @@ const ContextProvider = ({ children }) => {
             copyCustom.push(item);
             setCustomCart(copyCustom);
         }
-        // console.log('O CUSTOM É');
-        // console.log(item.acai.custom);
 
         if (!found) {
-            console.log("NAO TEM UM ACAI");
-            // if (item.acai.size == "p") {
-            //     // item.acai.price = 6;
-            //     item.acai.details.size = "Pequeno";
-            // } else if (item.acai.size == "m") {
-            //     // item.acai.price = 8;
-            //     item.acai.details.size = "Médio";
-            // } else if (item.acai.size == "g") {
-            //     // item.acai.price = 10;
-            //     item.acai.details.size = "Grande";
-            // }
             copyCart.push(item);
         } else {
             found.acai.amount = found.acai.amount + 1;
@@ -100,10 +86,8 @@ const ContextProvider = ({ children }) => {
             sumPrice += item.acai.price * item.acai.amount;
             sumAmount += item.acai.amount;
         });
-        // console.log(sumPrice);
         setAmountView(sumAmount);
         setPriceCart(sumPrice);
-        // setLengthCart(cart.length)
     };
 
     const removeItemCart = (item) => {
@@ -134,10 +118,8 @@ const ContextProvider = ({ children }) => {
             sumPrice += item.acai.price * item.acai.amount;
             sumAmount += item.acai.amount;
         });
-        console.log(sumPrice);
         setAmountView(sumAmount);
         setPriceCart(sumPrice);
-        // setLengthCart(cart.length)
     };
 
     const [acai, setAcai] = useState({
@@ -224,6 +206,8 @@ const ContextProvider = ({ children }) => {
                 renderCart,
                 addCustomAcaiToCart,
                 customCart,
+                load,
+                setLoad,
             }}
         >
             {children}

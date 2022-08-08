@@ -1,36 +1,24 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../contexts/Context";
-import OptionStep from "../../components/OptionStep/OptionStep";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import "../StepContainer/step.scss";
-import Data from "../../data/DataStep6.js";
 import { motion } from "framer-motion";
 
 const StepClient_7 = () => {
     const {
-        setAcai,
-        setRender,
         setPosition,
-        position,
-        setPrice,
-        price,
         setNameClient,
         nameClient,
         addCustomAcaiToCart,
-        acai
+        acai,
     } = useContext(Context);
 
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
         setPosition(7);
-        console.log("PAGE 2 MEU POSITION É " + position);
-        console.log("CONTEUDO: " + acai.fruit);
     });
-
-    const [name, setName] = useState('');
-
 
     return (
         <div className="step-content">
@@ -71,8 +59,11 @@ const StepClient_7 = () => {
                 <Link to="/step/step6">
                     <Button text="Voltar" />
                 </Link>
-                <Link to="/step/step8" onClick={()=> addCustomAcaiToCart(acai)}>
-                    <Button text="Finalizar" secondary={true}/>
+                <Link
+                    to="/step/step8"
+                    onClick={() => addCustomAcaiToCart(acai)}
+                >
+                    <Button text="Finalizar" secondary={true} />
                 </Link>
             </div>
         </div>
