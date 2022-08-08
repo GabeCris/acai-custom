@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/acai-custom/static/css/main.f1aefcbb.css",
-    "main.js": "/acai-custom/static/js/main.d36d96fa.js",
-    "index.html": "/acai-custom/index.html",
-    "main.f1aefcbb.css.map": "/acai-custom/static/css/main.f1aefcbb.css.map",
-    "main.d36d96fa.js.map": "/acai-custom/static/js/main.d36d96fa.js.map"
+    "main.css": "/static/css/main.f1aefcbb.css",
+    "main.js": "/static/js/main.d36d96fa.js",
+    "index.html": "/index.html",
+    "main.f1aefcbb.css.map": "/static/css/main.f1aefcbb.css.map",
+    "main.d36d96fa.js.map": "/static/js/main.d36d96fa.js.map"
   },
   "entrypoints": [
     "static/css/main.f1aefcbb.css",
